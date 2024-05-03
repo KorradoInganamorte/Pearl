@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./app/**/*tsx", "./components/**/*tsx", "./UI/**/*tsx"],
+  content: ["./app/**/*tsx", "./components/**/*tsx", "./UI/**/*tsx", "./modules/**/*tsx"],
   theme: {
     fontSize: {
       sm: '1.2rem',

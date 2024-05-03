@@ -1,14 +1,24 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { nunitoMedium } from "@/public/fonts"
 
-const FilmCard = () => {
+type Props = {
+  name?: string
+  series?: string
+  date?: string
+  like?: number
+  dislike?: number
+}
+
+const FilmCard = ({ name, series, date, like, dislike }: Props) => {
   return (
     <div className="w-[44.7rem]">
       <img className="w-full h-[26.4rem] rounded-[.4rem] mb-[1.2rem]" src="/images/test.jpg" alt="film preview image" />
 
       <div className="flex justify-between mb-[3rem]">
         <div className="inline-block">
-          <h3 className={`${nunitoMedium} text-4xl text-white mb-[1rem]`}>Initial D</h3>
-          <p className="text-2xl text-gray">Legend 1, 2021</p>
+          <h3 className={`${nunitoMedium} text-4xl text-white mb-[1rem]`}>{name}</h3>
+          <p className="text-2xl text-gray">{series ? `${series}, ${date}` : `${date}`}</p>
         </div>
         <button className="h-min"><img className="w-[2rem] h-[1.8rem]" src="/icons/favourites.svg" alt="favourites icon" /></button>
       </div>

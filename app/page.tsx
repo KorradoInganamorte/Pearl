@@ -1,10 +1,11 @@
-import FilmCard from "@/components/FilmCard"
+import FilmModules from "@/modules/FilmModules/components/FilmModules"
+import QueryClientContextProvider from "@/modules/FilmModules/helpers/QueryClientContextProvider"
 
 const Home = () => {
   return (
-    <div className="flex justify-center">
-      <FilmCard />
-    </div>
+    <QueryClientContextProvider>
+      <FilmModules />
+    </QueryClientContextProvider>
   )
 }
 
