@@ -14,7 +14,13 @@ const FilmModules = () => {
 
   return (
     <div className="flex justify-center">
-      {isPending ? <p className="text-4xl text-white">Loading...</p> : isSuccess ? <FilmCard name={data?.data[0].attributes.name} series={data?.data[0].attributes.series} date={data?.data[0].attributes.date} like={data?.data[0].attributes.like} dislike={data?.data[0].attributes.dislike} /> : <ErrorMessage />}
+      {
+        isPending 
+        ? <p className="text-4xl text-white">Loading...</p> 
+        : isSuccess ? 
+        data?.data.map(film => <FilmCard key={film.id} name={film.attributes.name} series={film.attributes.series} date={film.attributes.date} like={film.attributes.like} dislike={film.attributes.dislike} /> )
+        : <ErrorMessage />
+      }
     </div>
   )
 }
