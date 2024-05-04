@@ -29,7 +29,8 @@ const config: Config = {
     colors: {
       white: "#FFFFFF",
       black: "#000000",
-      gray: "#585858"
+      gray: "#585858",
+      red: "#A12E2E"
     },
     extend: {},
   },
